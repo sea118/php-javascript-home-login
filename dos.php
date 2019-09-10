@@ -6,7 +6,11 @@ $userE=$_POST['user'];
 $passE=$_POST['pass'];
 if($user==$userE && $pass==$passE){
     header("location: tres.php");
+    session_start();
+    $_SESSION["nombre"] = $userE;
+    $_SESSION["pass"] = $passE;
     echo "te logiaste bien";
+        
 }
 else{
     header("location: index.php");

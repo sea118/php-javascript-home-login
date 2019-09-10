@@ -4,6 +4,8 @@
 // $solicitud="delete from datos where id=$id";
 // $resultado=mysqli_query($coneccion, $solicitud);
 // header("location: dos.php");
+session_start();
+
 
 ?>
 
@@ -82,3 +84,7 @@
     </form>
   </div>
 </nav>
+
+<?php 
+  echo "<h1>Hola ".$_SESSION['nombre']." tu contraseña fue: ".$_SESSION['pass']."</h1>";
+?>
